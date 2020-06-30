@@ -1,0 +1,3 @@
+graft catchafish_app
+global-exclude *.py[cod] __pycache__ *.so *.ipynb
+recursive-exclude  catchafish_app/jupy *

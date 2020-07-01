@@ -7,10 +7,10 @@ import wikipedia
 from catchafish_app.utils import predict
 from catchafish_app.utils import PROJECT_ID, BUCKET_NAME, BUCKET_MODEL_NAME, MODEL_VERSION
 
-#Display title
+# Display title
 st.title('Catch a fish !')
 
-#upload image to predict
+# Upload image to predict
 uploaded_image = st.file_uploader("Choose image to predict")
 if uploaded_image is not None:
     image = imread(uploaded_image)
@@ -18,7 +18,7 @@ if uploaded_image is not None:
     image = resize(image, (128, 128))
     image = np.expand_dims(image, axis = 0)
 
-#predict fish
+# Predict fish
 if uploaded_image:
     instances = image.tolist()
 

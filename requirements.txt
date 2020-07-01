@@ -9,3 +9,7 @@ black
 yapf
 python-gitlab
 twine
+scikit-image
+streamlit
+wikipedia
+google-api-python-client

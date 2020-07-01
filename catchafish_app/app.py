@@ -8,8 +8,10 @@ import os
 from catchafish_app.utils import predict
 from catchafish_app.utils import PROJECT_ID, BUCKET_NAME, BUCKET_MODEL_NAME, MODEL_VERSION
 
-os.system('touch google-credentials.json')
-os.system('echo GOOGLE_CREDENTIALS > google-credentials.json')
+credentials = os.environ["GOOGLE_CREDENTIALS"] #dictionary
+json_file = open(os.environ['GOOGLE_APPLICATION_CREDENTIALS'], 'w')
+json_file.write(credentials)
+json_file.close()
 
 # Display title
 st.title('Catch a fish !')

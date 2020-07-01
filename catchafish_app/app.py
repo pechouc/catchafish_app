@@ -3,9 +3,13 @@ from skimage.io import imread,imsave
 from skimage.transform import resize
 import numpy as np
 import wikipedia
+import os
 
 from catchafish_app.utils import predict
 from catchafish_app.utils import PROJECT_ID, BUCKET_NAME, BUCKET_MODEL_NAME, MODEL_VERSION
+
+#os.system('mkdir google-credentials.json')
+os.system('echo GOOGLE_CREDENTIALS > GOOGLE_APPLICATION_CREDENTIALS')
 
 # Display title
 st.title('Catch a fish !')

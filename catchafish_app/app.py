@@ -8,10 +8,10 @@ import os
 from catchafish_app.utils import predict, get_additional_images, add_image_to_dataset
 from catchafish_app.utils import PROJECT_ID, BUCKET_NAME, BUCKET_MODEL_NAME, MODEL_VERSION, NAMES_MAPPING
 
-#credentials = os.environ["GOOGLE_CREDENTIALS"] #dictionary
-#json_file = open(os.environ['GOOGLE_APPLICATION_CREDENTIALS'], 'w')
-#json_file.write(credentials)
-#json_file.close()
+credentials = os.environ["GOOGLE_CREDENTIALS"] #dictionary
+json_file = open(os.environ['GOOGLE_APPLICATION_CREDENTIALS'], 'w')
+json_file.write(credentials)
+json_file.close()
 
 mode = st.sidebar.selectbox("👇 Select your profile", ["Curious", "Expert"])
 
